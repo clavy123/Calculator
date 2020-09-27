@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caluclator</title>
+	<script>
+		function change(num)
+		{
+			document.getElementById("hello").value=document.getElementById("hello").value+num;
+		}
+		function clear1()
+		{
+			document.getElementById("hello").value=null;
+		}
+		function change2()
+		{
+			document.getElementById("hello").value=eval(document.getElementById("hello").value);
+		}
+		function change4()
+		{
+                document.getElementById("hello").value=Math.PI*document.getElementById("hello").value;
+		}
+		function change5()
+		{
+            document.getElementById("hello").value=Math.round(document.getElementById("hello").value);
+		}
+		function change6()
+		{
+             document.getElementById("hello").value=Math.floor(document.getElementById("hello").value);
+		}
+		function change7()
+		{
+                document.getElementById("hello").value=Math.ceil(document.getElementById("hello").value);
+		}
+	</script>
+	<style>
+		body{
+			background-image:linear-gradient(to right,rgb(128,255,191) ,rgb(255,102,0));
+		}
+		.main{
+			position: absolute;
+			top:35%;
+			left:33%;
+		}
+	    
+	    .h1{
+	    	width:90px;
+	    	height:30px;
+	    	margin:1px;
+	    	border-radius:16px;
+	    }
+	    .h1:hover{
+                   background-image:linear-gradient(blue,red);
+                   cursor:pointer;
+
+	    }
+	    #hello{
+	    	border-radius:16px;
+	    	height:27px;
+	    	width:276px;
+	    }
+	    #hello:hover{
+	       background-color:rgb(230, 230, 230);
+	    }
+		
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="main2">
+  <input type="text" id="hello">
+
+  <section id="s1">
+  <button class="h1" onclick="change(1)" style="background-color:rgb(128, 255, 191);">1</button>
+  <button class="h1" onclick="change(2)" style="background-color:rgb(128, 255, 191);">2</button>
+  <button class="h1" onclick="change(3)" style="background-color:rgb(128, 255, 191);">3</button>
+</section>
+<section id="s2">
+  <button class="h1" onclick="change(4)" style="background-color:rgb(128, 255, 191);">4</button>
+  <button class="h1" onclick="change(5)" style="background-color:rgb(128, 255, 191);">5</button>
+  <button class="h1" onclick="change(6)" style="background-color:rgb(128, 255, 191);">6</button>
+</section>
+<sectio id="s3">
+  <button class="h1" onclick="change(7)" style="background-color:rgb(128, 255, 191);">7</button>
+  <button class="h1" onclick="change(8)" style="background-color:rgb(128, 255, 191);">8</button>
+  <button class="h1" onclick="change(9)" style="background-color:rgb(128, 255, 191);">9</button>
+</sectio>
+<section id="s4">
+  <button class="h1" onclick="change('+')" style="background-color:rgb(128, 255, 191);">+</button>
+  <button class="h1" onclick="change('-')" style="background-color:rgb(128, 255, 191);">-</button>
+  <button class="h1" onclick="change('*')" style="background-color:rgb(128, 255, 191);">*</button>
+</section>
+<section id="s5">
+  <button class="h1" onclick="change('/')" style="background-color:rgb(128, 255, 191);">/</button>
+  <button class="h1" onclick="change2()" style="background-color:rgb(128, 255, 191);">=</button>
+  <button class="h1" onclick="change4()" style="background-color:rgb(128, 255, 191);">PI</button>
+</section>
+<section id="s6">
+  <button class="h1" onclick="change5()" style="background-color:rgb(128, 255, 191);">round</button>
+  <button class="h1" onclick="change6()" style="background-color:rgb(128, 255, 191);">floor</button>
+  <button class="h1" onclick="change7()" style="background-color:rgb(128, 255, 191);">ceil</button>
+</section>
+<section id="s7">
+ <button class="h1" onclick="clear1()" id="s9" style=" width:283px;background-color:rgb(128, 255, 191);">clear</button>
+</section>
+</div>
+</div>
+
+</body>
+</html>
