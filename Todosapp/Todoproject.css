@@ -1,0 +1,46 @@
+	*{
+			margin:0;
+			padding: 0;
+		}
+		.todo-center{
+			display: grid;
+			place-items:center;
+			height: 100vh;
+		}
+		.todo-main{
+			padding: 30px;
+			background-color:black;
+		}
+		.todo-padding{
+             max-width: 400px;
+		}
+		.todo-padding input{
+			width:200px;
+			outline: none;
+		}
+		.todo-padding button{
+			outline: none;
+			border:none;
+			width: 40px;
+			padding:2px;
+		}
+		.todo-list{
+          margin-top: 3px;
+          display: flex;
+          position: relative;
+     
+		}
+
+		.todo-list ul li{
+			list-style-type:none;
+			color: white;
+      user-select: none;
+      font-family: sans-serif;
+		}
+		  .close{
+			color: white;
+      position: absolute;
+      right: 0;
+      width: 35px;
+      border:none;
+		}
