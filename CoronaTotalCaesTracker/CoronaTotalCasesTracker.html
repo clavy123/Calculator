@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+	</script>
+	<script>
+		$(document).ready(function(){
+			init();
+			function init()
+			{
+				let url="https://api.covid19api.com/summary";
+				let data="";
+			  $.get(url,function(data){
+			  	  console.log(data.Global.NewConfirmed);
+			  	  data=`
+			  	    <td>${data.Global.TotalConfirmed}</td>
+			  	    <td>${data.Global.TotalRecovered}</td>
+			  	    <td>${data.Global.TotalDeaths}</td>
+
+			  	   `
+			  	    $("#add").html(data);
+			  })
+
+			}
+
+			
+		})
+	</script>
+	
+</head>
+<body>
+  <h1 style="text-align: center;">CoronaTotalCasesTracker</h1>
+   <table class="table">
+    <thead>
+      <tr>
+        <th>TotalConfirmed</th>
+        <th>TotalRecovered</th>
+        <th>TotalDeaths</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="add">
+       
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
